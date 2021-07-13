@@ -1,0 +1,83 @@
+<p class="rojo"><strong>This App and DApp is only for TESTING, and it works under the KOVAN testnet, it is necessary to have Ether and LINK.</strong></p>
+<mat-toolbar color="secondary" style="min-height: 60px !important; height: 55px !important;" class="mat-elevation-z6">
+    <img matListAvatar src="assets/paw.png" width="48" height="48" alt="icon">
+    <span class="font14">&nbsp;&nbsp;&nbsp;Pet's Shelter:: {{nameShelter}}</span>
+    <span class="spacer"></span>
+    <span class="font14">Total Donations : {{totalDonations}} ETH</span>
+    <span class="spacer"></span>
+    <span class="font14">Total Friends : {{countFriend}} friend's</span>
+    <span class="spacer"></span>
+    <span class="font14">Total Pet's : {{countPet}} pet's</span>
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary" (click)="donateDialog()">DONATE NOW!
+    </button>
+</mat-toolbar>
+<br>
+<div class="body2">  
+    <mat-card class="mat-elevation-z4">
+        <mat-grid-list cols="4">
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-header>
+                        <img mat-card-avatar src="assets/paw.png">
+                        <mat-card-title>Dogs are beautiful</mat-card-title>
+                        <mat-card-subtitle>Do it for they!</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/pet.png">
+                    <mat-card-content>
+                        <button class="full-width" mat-raised-button color="primary"
+                            (click)="createPetDialog()">Register a Pet
+                        </button>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-header>
+                        <img mat-card-avatar src="assets/paw.png">
+                        <mat-card-title>Make a new Friend</mat-card-title>
+                        <mat-card-subtitle>Do it for they!</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/friend.png">
+                    <mat-card-content>
+                        <button class="full-width" mat-raised-button color="primary"
+                            (click)="createFriendDialog()">Register as a Friend
+                        </button>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-header>
+                        <img mat-card-avatar src="assets/paw.png">
+                        <mat-card-title>Dogs need a house</mat-card-title>
+                        <mat-card-subtitle>Do it for they!</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/adopt.png">
+                    <mat-card-content>
+                        <button class="full-width" mat-raised-button color="primary"
+                            (click)="adoptPetDialog()">Adopt a pet
+                        </button>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-header>
+                        <img mat-card-avatar src="assets/paw.png">
+                        <mat-card-title>Donate for Pet's</mat-card-title>
+                        <mat-card-subtitle>Do it for they!</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/donate.png">
+                    <mat-card-content>
+                        <button class="full-width" mat-raised-button color="primary"
+                            (click)="donateDialog()">Donate
+                        </button>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-card>
+</div>
+
+<router-outlet></router-outlet>
