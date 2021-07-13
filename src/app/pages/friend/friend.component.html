@@ -1,0 +1,18 @@
+<div class="body">
+    <div class="donate">
+        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+        <form *ngIf="!loading" [formGroup]="form">
+            <img src="assets/friend.png" width="30%" height="30%" alt="icon">
+            <h1 class="h3 mb-3 fw-normal">Register as a Friend</h1>
+            <h6>Account: {{this.data.account}}</h6>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Name: </mat-label>
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>            
+            <mat-card-actions>
+                <button class="anchofijo alto" mat-raised-button mat-button color="primary" [disabled]="form.invalid"
+                    (click)="registerFriend()">Register</button>                
+            </mat-card-actions>
+        </form>
+    </div>
+</div>
