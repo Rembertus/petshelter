@@ -1,0 +1,23 @@
+<div>
+    <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+    <mat-grid-list cols="4" rowHeight="440px">
+        <mat-grid-tile *ngFor="let pet of this.data.pets">
+            <mat-card>
+                <mat-card-header>
+                    <img mat-card-avatar src="assets/paw.png">
+                    <mat-card-title>Name: {{pet.name}}</mat-card-title>
+                    <mat-card-subtitle>Age: {{pet.age}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <img matd-card-image src="assets/{{getPhoto(pet.idphoto)}}" width="256px" height="256px" alt="{{pet.name}}" />
+                    <h5>Breed: {{getNameBreed(pet.idbreed)}}</h5>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button class="full-width" mat-raised-button color="primary" [disabled]=pet.adopted  (click)="adoptPet(pet.id)">
+                        {{ !pet.adopted? 'ADOPT' : 'ADOPTED :)' }}
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
