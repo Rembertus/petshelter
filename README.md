@@ -4,7 +4,7 @@
 // The code for this Smart Contract has not been professionally audited, therefore I cannot make any promises about
 // safety or correctness. Use at own risk.
 
-### Screen Shots  from (http://petshelter.tr7soft.com/)
+### Screenshots from (http://petshelter.tr7soft.com/)
 ![Main Screen in Angular](pets-main.jpg)
 #
 ![Register Friend](pets-registerfriend.jpg)
