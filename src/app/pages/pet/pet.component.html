@@ -1,0 +1,41 @@
+<div class="body">
+    <div class="donate">
+        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+        <form *ngIf="!loading" [formGroup]="form">
+            <img src="assets/pet.png" width="30%" height="30%" alt="icon">
+            <h1 class="h3 mb-3 fw-normal">Register a Pet</h1>
+            <h6>Account: {{this.data.account}}</h6>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Name: </mat-label>
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Breed:</mat-label>
+                <mat-select formControlName="idbreed">
+                    <mat-option *ngFor="let breed of this.breed" [value]="breed.id">
+                        {{breed.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Age: </mat-label>
+                <input matInput type="number" formControlName="age">
+            </mat-form-field>
+
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Photo:</mat-label>
+                <mat-select height="128px" formControlName="idphoto">
+                    <mat-option *ngFor="let photo of this.photos" [value]="photo.id">
+                        <img class="petPhoto" src='assets/{{photo.image}}'> {{photo.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-card-actions>
+                <button class="anchofijo alto" mat-raised-button mat-button color="primary" [disabled]="form.invalid"
+                    (click)="registerPet()">Register</button>
+            </mat-card-actions>
+        </form>
+    </div>
+</div>
