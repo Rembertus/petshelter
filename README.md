@@ -1,5 +1,4 @@
 # DApp PetShelter
-DApp for PetShelter, processes included: Register a Pet, Register a Friend, Adopt a Pet, Donate for Pet Shelter.
 
 # WARNING
 // The code for this Smart Contract has not been professionally audited, therefore I cannot make any promises about
@@ -17,7 +16,7 @@ DApp for PetShelter, processes included: Register a Pet, Register a Friend, Adop
 # This Smart Contract
 - Processes included: Register a Pet (Owner role only), Register a Friend, Adopt a Pet (Friend role), Donate for Pet Shelter (Friend role).
 - Two roles are considered for permissions, for this is used "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.1.0/contracts/access/AccessControl.sol"
-- Consume a function to generate a pseudo-random number, from "https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/VRFConsumerBase.sol"
+- Consume a function to generate a pseudo-random number, from "https://github.com/smartcontractkit/chainlink/blob/master/evm-contracts/src/v0.6/VRFConsumerBase.sol"
 - Smart Contract is deployed in KOVAN testnet
 - For the FrontEnd, I implemented a website as example, developed in Angular "http://petshelter.tr7soft.com/"
 
@@ -37,4 +36,3 @@ DApp for PetShelter, processes included: Register a Pet, Register a Friend, Adop
 
 # Contact
 - Remberto Gonzales Cruz (rembertus at gmail.com)
-
