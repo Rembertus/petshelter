@@ -1,0 +1,67 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8d6d6;
+    height: 100%;
+}
+
+.donate {
+    width: 100%;
+    max-width: 95%;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.ancho { 
+  width: 80%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.anchofijo {
+    width: 150px;
+  }
+
+.alto {
+    height: 60px;
+}
+
+.spinner {
+    margin: 0 auto;
+}
+
+.petPhoto {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 250px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+  
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.font14 {
+    font-size: 1.0em;
+}
+
+.rojo {
+    background-color: red;
+}
